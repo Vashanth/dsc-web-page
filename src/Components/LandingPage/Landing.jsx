@@ -4,6 +4,8 @@ import Terminal from "./Terminal/terminal";
 import AboutUs from "./About/AboutUs";
 import Clusters from "./Clusters/Clusters";
 import ContactUs from "./ContactUs/ContactUs";
+import Twitter from './Twitter/Twitter'
+import {TwitterFollowButton} from 'react-twitter-embed'
 
 class Landing extends Component {
   render() {
@@ -12,6 +14,9 @@ class Landing extends Component {
         <Terminal />
         <AboutUs />
         <Clusters />
+        <div className="customTweetContainer" style={{display:'flex',justifyContent:'center'}}>
+          <Twitter />
+        </div>
         <ContactUs />
         <div className="Landing__address container">
           <br />
@@ -20,7 +25,10 @@ class Landing extends Component {
           <br />
           Thanjavur,
           <br />
-          Tamil Nadu
+          Tamil Nadu         
+          <TwitterFollowButton
+          screenName={'dsc_sastra'}
+        />
         </div>
       </div>
     );

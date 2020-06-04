@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./Contact.css";
-
 class ContactUs extends Component {
   state = {
     email: "",
